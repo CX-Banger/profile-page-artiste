@@ -28,12 +28,11 @@ body {
 }
 
 .logo {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    color: #3be477;
 }
 
 .nav-menu {
