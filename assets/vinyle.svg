@@ -1,0 +1,10 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="background: transparent;">
+  <!-- Disque principal noir -->
+  <circle cx="200" cy="200" r="190" fill="#000000"/>
+  
+  <!-- Label central blanc -->
+  <circle cx="200" cy="200" r="60" fill="#ffffff"/>
+  
+  <!-- Trou central noir -->
+  <circle cx="200" cy="200" r="8" fill="#000000"/>
+</svg>
