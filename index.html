@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <div class="container">
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
                 <div class="logo">
                     <svg width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M10.421 11.375c-.294 1.028.012 2.064.784 2.653 1.061.81 2.565.3 2.874-.995.08-.337.103-.722.027-1.056-.23-1.001-.52-1.988-.792-2.996-1.33.154-2.543 1.172-2.893 2.394zm5.548-.287c.273 1.012.285 2.017-.127 3-1.128 2.69-4.721 3.14-6.573.826-1.302-1.627-1.28-3.961.06-5.734.78-1.032 1.804-1.707 3.048-2.054l.379-.104c-.084-.415-.188-.816-.243-1.224-.176-1.317.512-2.503 1.744-3.04 1.226-.535 2.708-.216 3.53.76.406.479.395 1.08-.025 1.464-.412.377-.996.346-1.435-.09-.247-.246-.51-.44-.877-.436-.525.006-.987.418-.945.937.037.468.173.93.3 1.386.022.078.216.135.338.153 1.334.197 2.504.731 3.472 1.676 2.558 2.493 2.861 6.531.672 9.44-1.529 2.032-3.61 3.168-6.127 3.409-4.621.44-8.664-2.53-9.7-7.058C2.515 10.255 4.84 5.831 8.795 4.25c.586-.234 1.143-.031 1.371.498.232.537-.019 1.086-.61 1.35-2.368 1.06-3.817 2.855-4.215 5.424-.533 3.433 1.656 6.776 5 7.72 2.723.77 5.658-.166 7.308-2.33 1.586-2.08 1.4-5.099-.427-6.873a3.979 3.979 0 0 0-1.823-1.013c.198.716.389 1.388.57 2.062z"></path> </g> </g></svg> Muzikly
                 </div>
@@ -67,6 +68,11 @@
         <main class="main-content">
             <!-- Top Bar -->
             <header class="top-bar">
+                <button class="menu-toggle" id="menuToggle">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </button>
                 <div class="top-right">
                     <svg class="notification-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
@@ -104,6 +110,11 @@
                     <div class="playlist-item">
                         <div class="playlist-cover">
                             <img src="https://i.pinimg.com/236x/2c/23/17/2c2317fb606f8dad772f8b2a63dc1b07.jpg" alt="Art Techno">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
                         </div>
                         <div class="playlist-info">
                             <h4>YHWH</h4>
@@ -117,6 +128,11 @@
                     <div class="playlist-item">
                         <div class="playlist-cover">
                             <img src="https://i.pinimg.com/236x/2c/23/17/2c2317fb606f8dad772f8b2a63dc1b07.jpg" alt="Work Out">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
                         </div>
                         <div class="playlist-info">
                             <h4>Freestyle Pour Dieu</h4>
@@ -130,6 +146,11 @@
                     <div class="playlist-item">
                         <div class="playlist-cover">
                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAABVlJREFUeAHtnNdu60gQREfOOcABsN/8/59lwA8OcM7p4hCXCy5h0WytKHJqqwFCpjwz7K6amkyNTk5OvpNNFoE52cgcWIGACRavCCbYBIsjIB6eFWyCxREQD88KNsHiCIiHZwWbYHEExMOzgk2wOALi4VnBJlgcAfHwrGATLI6AeHhWsAkWR0A8PCvYBIsjIB6eFWyCxREQD88KNsHiCIiHZwWbYHEExMOzgk2wOALi4VnBJlgcAfHwrGATLI6AeHhWsAkWR0A8PCvYBIsjIB6eFWyCxREQD88KFid4QTW+hYWFtLa2lpaXl9P8/Hzink/s8/MzfXx8FJ+vr6/p6empuFfEYqT0Q2hzc3Npa2srra+vp6WlpRBfb29v6fHxMd3d3aWvr69Q3iEnllDwaDRK29vbxQXJkxgVgotybm9vi+v7O/8fAcyeYJrhvb29ogmehNh6HirI7u5u2tzcTFdXV0XzXU+T0/1k1X0gEe7s7KTDw8OpkVsNiz6bsnlGzpalgmmS9/f308bGRqfY8xzUvLi4mC4vL1OOTXaWCj44OOic3GrNoSJRoXK07AimyWSUPGuD5Byb66wIZkDVJ8g8Gx9ysmwIpj9ktMxnXzYEH6KxZ0Mw81NGtn0bPuBLLtY/Yi2QYm46KajPz8/FCtXLy8s/y5GQtLKyUvTlq6urLTz4dxJ8yWXFKwuCWX6MrlC9v78XUxuIrRv/47q/vy+IZoTMVKit4Qs+3dzctM3SW7osmujoqBnVnp2dpZ/IrSNNGtKSJ2JRnyJlTzPt4AmmOY1sHKDM8/Pz0IYBmwvkIW9bw6chjAl+83fwBEenJaw4TbIbRB7yRizqW6TsaaUdPMHs57Y1mtk2zfK48sgbaaojvo17ZtffD57gcpO+DRAPDw9tkjWmiZQR8a3xoR3+c/Cj6Eg/x+mMccZ0qFxPpikep9SmMuplR3yr553VvZSCOYYzziAXQrhKon9K21RGPX0OCh48wXVQfR9DYPAEc0CurTU1mTTLqJOrabTcVEbdj4hv9byzuh98HwwhbVeZGNWOm8vS556env6KK0uYbS3SnLctc9rppBQ8jRMekRWqHBQ8eIIjo1pGyhEF1tVC3sjmQ8S3+rNmdT94gjmUHjFGyNGNCconT9Po+icfor79VEbX3w2eYPo5DqW3NfprTkNGSCYtedr29fiCT+6D27LySzreOIgYzezx8XGr5ppmmbSRphlfoj5F/J9m2sGPogmWzXU22SOqRI1HR0fFihXLj/SXpeKYCjHiZlAWJRZ/2JjApxwsC4IBlNdJOKMcNQichMSm5+DLJDtWTWV29b/B98Fl4IBaKrD8ro9PfMCXXCwbgnmrgHeF+ny7YAg+RCtWNgQTGNOSPs9B8ewcpkbVSpAVwTgOyH2MYBmo9Vm5qqRF/s6OYIK7uLiYKclUqKYNigjgs06bJcH0hRySu76+7rRP5jk8g2f12ff/l0qRxTRpXIA0mawoTfMF8PJZjJYVXgDPmmDIYNDDViALIdHFkJLM6mc552YqlKtqq/FkTzDBQARqZnXJP8JSpTclqV/ZqYbGciTnllmS5OwU9+UZqv/TzyhJKLhKbPk3fWgu68Wlz118ZjmK7gII1TJNsCqzf+MywSZYHAHx8KxgEyyOgHh4VrAJFkdAPDwr2ASLIyAenhVsgsUREA/PCjbB4giIh2cFm2BxBMTDs4JNsDgC4uFZwSZYHAHx8KxgEyyOgHh4VrAJFkdAPDwr2ASLIyAenhVsgsUREA/PCjbB4giIh2cFm2BxBMTDs4JNsDgC4uFZwSZYHAHx8KxgEyyOgHh4VrA4wX8AfRTBIQvxo90AAAAASUVORK5CYII=" alt="Quiet Hours">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
                         </div>
                         <div class="playlist-info">
                             <h4>Zinzin</h4>
@@ -143,6 +164,11 @@
                     <div class="playlist-item">
                         <div class="playlist-cover">
                             <img src="https://i.pinimg.com/236x/2c/23/17/2c2317fb606f8dad772f8b2a63dc1b07.jpg" alt="Deep Focus">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
                         </div>
                         <div class="playlist-info">
                             <h4>Choisir Papa</h4>
@@ -156,6 +182,11 @@
                     <div class="playlist-item">
                         <div class="playlist-cover">
                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAABVlJREFUeAHtnNdu60gQREfOOcABsN/8/59lwA8OcM7p4hCXCy5h0WytKHJqqwFCpjwz7K6amkyNTk5OvpNNFoE52cgcWIGACRavCCbYBIsjIB6eFWyCxREQD88KNsHiCIiHZwWbYHEExMOzgk2wOALi4VnBJlgcAfHwrGATLI6AeHhWsAkWR0A8PCvYBIsjIB6eFWyCxREQD88KNsHiCIiHZwWbYHEExMOzgk2wOALi4VnBJlgcAfHwrGATLI6AeHhWsAkWR0A8PCvYBIsjIB6eFWyCxREQD88KFid4QTW+hYWFtLa2lpaXl9P8/Hzink/s8/MzfXx8FJ+vr6/p6empuFfEYqT0Q2hzc3Npa2srra+vp6WlpRBfb29v6fHxMd3d3aWvr69Q3iEnllDwaDRK29vbxQXJkxgVgotybm9vi+v7O/8fAcyeYJrhvb29ogmehNh6HirI7u5u2tzcTFdXV0XzXU+T0/1k1X0gEe7s7KTDw8OpkVsNiz6bsnlGzpalgmmS9/f308bGRqfY8xzUvLi4mC4vL1OOTXaWCj44OOic3GrNoSJRoXK07AimyWSUPGuD5Byb66wIZkDVJ8g8Gx9ysmwIpj9ktMxnXzYEH6KxZ0Mw81NGtn0bPuBLLtY/Yi2QYm46KajPz8/FCtXLy8s/y5GQtLKyUvTlq6urLTz4dxJ8yWXFKwuCWX6MrlC9v78XUxuIrRv/47q/vy+IZoTMVKit4Qs+3dzctM3SW7osmujoqBnVnp2dpZ/IrSNNGtKSJ2JRnyJlTzPt4AmmOY1sHKDM8/Pz0IYBmwvkIW9bw6chjAl+83fwBEenJaw4TbIbRB7yRizqW6TsaaUdPMHs57Y1mtk2zfK48sgbaaojvo17ZtffD57gcpO+DRAPDw9tkjWmiZQR8a3xoR3+c/Cj6Eg/x+mMccZ0qFxPpikep9SmMuplR3yr553VvZSCOYYzziAXQrhKon9K21RGPX0OCh48wXVQfR9DYPAEc0CurTU1mTTLqJOrabTcVEbdj4hv9byzuh98HwwhbVeZGNWOm8vS556env6KK0uYbS3SnLctc9rppBQ8jRMekRWqHBQ8eIIjo1pGyhEF1tVC3sjmQ8S3+rNmdT94gjmUHjFGyNGNCconT9Po+icfor79VEbX3w2eYPo5DqW3NfprTkNGSCYtedr29fiCT+6D27LySzreOIgYzezx8XGr5ppmmbSRphlfoj5F/J9m2sGPogmWzXU22SOqRI1HR0fFihXLj/SXpeKYCjHiZlAWJRZ/2JjApxwsC4IBlNdJOKMcNQichMSm5+DLJDtWTWV29b/B98Fl4IBaKrD8ro9PfMCXXCwbgnmrgHeF+ny7YAg+RCtWNgQTGNOSPs9B8ewcpkbVSpAVwTgOyH2MYBmo9Vm5qqRF/s6OYIK7uLiYKclUqKYNigjgs06bJcH0hRySu76+7rRP5jk8g2f12ff/l0qRxTRpXIA0mawoTfMF8PJZjJYVXgDPmmDIYNDDViALIdHFkJLM6mc552YqlKtqq/FkTzDBQARqZnXJP8JSpTclqV/ZqYbGciTnllmS5OwU9+UZqv/TzyhJKLhKbPk3fWgu68Wlz118ZjmK7gII1TJNsCqzf+MywSZYHAHx8KxgEyyOgHh4VrAJFkdAPDwr2ASLIyAenhVsgsUREA/PCjbB4giIh2cFm2BxBMTDs4JNsDgC4uFZwSZYHAHx8KxgEyyOgHh4VrAJFkdAPDwr2ASLIyAenhVsgsUREA/PCjbB4giIh2cFm2BxBMTDs4JNsDgC4uFZwSZYHAHx8KxgEyyOgHh4VrA4wX8AfRTBIQvxo90AAAAASUVORK5CYII=" alt="Chill Vibes">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
                         </div>
                         <div class="playlist-info">
                             <h4>Le Temps</h4>
@@ -169,6 +200,11 @@
                     <div class="playlist-item">
                         <div class="playlist-cover">
                             <img src="https://i.pinimg.com/236x/2c/23/17/2c2317fb606f8dad772f8b2a63dc1b07.jpg" alt="Lofi Music">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
                         </div>
                         <div class="playlist-info">
                             <h4>Une Question...</h4>
@@ -182,6 +218,11 @@
                     <div class="playlist-item">
                         <div class="playlist-cover">
                             <img src="https://i.pinimg.com/236x/2c/23/17/2c2317fb606f8dad772f8b2a63dc1b07.jpg" alt="Movie Playlist">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
                         </div>
                         <div class="playlist-info">
                             <h4>Papa Yahweh ft. Eilynn</h4>
@@ -195,6 +236,11 @@
                     <div class="playlist-item">
                         <div class="playlist-cover">
                             <img src="https://i.pinimg.com/236x/2c/23/17/2c2317fb606f8dad772f8b2a63dc1b07.jpg" alt="Movie Playlist">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
                         </div>
                         <div class="playlist-info">
                             <h4>Saisir les Bases</h4>
@@ -208,6 +254,11 @@
                     <div class="playlist-item">
                         <div class="playlist-cover">
                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAAXNSR0IArs4c6QAABVlJREFUeAHtnNdu60gQREfOOcABsN/8/59lwA8OcM7p4hCXCy5h0WytKHJqqwFCpjwz7K6amkyNTk5OvpNNFoE52cgcWIGACRavCCbYBIsjIB6eFWyCxREQD88KNsHiCIiHZwWbYHEExMOzgk2wOALi4VnBJlgcAfHwrGATLI6AeHhWsAkWR0A8PCvYBIsjIB6eFWyCxREQD88KNsHiCIiHZwWbYHEExMOzgk2wOALi4VnBJlgcAfHwrGATLI6AeHhWsAkWR0A8PCvYBIsjIB6eFWyCxREQD88KFid4QTW+hYWFtLa2lpaXl9P8/Hzink/s8/MzfXx8FJ+vr6/p6empuFfEYqT0Q2hzc3Npa2srra+vp6WlpRBfb29v6fHxMd3d3aWvr69Q3iEnllDwaDRK29vbxQXJkxgVgotybm9vi+v7O/8fAcyeYJrhvb29ogmehNh6HirI7u5u2tzcTFdXV0XzXU+T0/1k1X0gEe7s7KTDw8OpkVsNiz6bsnlGzpalgmmS9/f308bGRqfY8xzUvLi4mC4vL1OOTXaWCj44OOic3GrNoSJRoXK07AimyWSUPGuD5Byb66wIZkDVJ8g8Gx9ysmwIpj9ktMxnXzYEH6KxZ0Mw81NGtn0bPuBLLtY/Yi2QYm46KajPz8/FCtXLy8s/y5GQtLKyUvTlq6urLTz4dxJ8yWXFKwuCWX6MrlC9v78XUxuIrRv/47q/vy+IZoTMVKit4Qs+3dzctM3SW7osmujoqBnVnp2dpZ/IrSNNGtKSJ2JRnyJlTzPt4AmmOY1sHKDM8/Pz0IYBmwvkIW9bw6chjAl+83fwBEenJaw4TbIbRB7yRizqW6TsaaUdPMHs57Y1mtk2zfK48sgbaaojvo17ZtffD57gcpO+DRAPDw9tkjWmiZQR8a3xoR3+c/Cj6Eg/x+mMccZ0qFxPpikep9SmMuplR3yr553VvZSCOYYzziAXQrhKon9K21RGPX0OCh48wXVQfR9DYPAEc0CurTU1mTTLqJOrabTcVEbdj4hv9byzuh98HwwhbVeZGNWOm8vS556env6KK0uYbS3SnLctc9rppBQ8jRMekRWqHBQ8eIIjo1pGyhEF1tVC3sjmQ8S3+rNmdT94gjmUHjFGyNGNCconT9Po+icfor79VEbX3w2eYPo5DqW3NfprTkNGSCYtedr29fiCT+6D27LySzreOIgYzezx8XGr5ppmmbSRphlfoj5F/J9m2sGPogmWzXU22SOqRI1HR0fFihXLj/SXpeKYCjHiZlAWJRZ/2JjApxwsC4IBlNdJOKMcNQichMSm5+DLJDtWTWV29b/B98Fl4IBaKrD8ro9PfMCXXCwbgnmrgHeF+ny7YAg+RCtWNgQTGNOSPs9B8ewcpkbVSpAVwTgOyH2MYBmo9Vm5qqRF/s6OYIK7uLiYKclUqKYNigjgs06bJcH0hRySu76+7rRP5jk8g2f12ff/l0qRxTRpXIA0mawoTfMF8PJZjJYVXgDPmmDIYNDDViALIdHFkJLM6mc552YqlKtqq/FkTzDBQARqZnXJP8JSpTclqV/ZqYbGciTnllmS5OwU9+UZqv/TzyhJKLhKbPk3fWgu68Wlz118ZjmK7gII1TJNsCqzf+MywSZYHAHx8KxgEyyOgHh4VrAJFkdAPDwr2ASLIyAenhVsgsUREA/PCjbB4giIh2cFm2BxBMTDs4JNsDgC4uFZwSZYHAHx8KxgEyyOgHh4VrAJFkdAPDwr2ASLIyAenhVsgsUREA/PCjbB4giIh2cFm2BxBMTDs4JNsDgC4uFZwSZYHAHx8KxgEyyOgHh4VrA4wX8AfRTBIQvxo90AAAAASUVORK5CYII=" alt="Movie Playlist">
+                            <div class="play-overlay">
+                                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
                         </div>
                         <div class="playlist-info">
                             <h4>Dessin</h4>
@@ -222,6 +273,60 @@
         </main>
     </div>
 
+    <!-- Lecteur Audio -->
+    <div class="music-player" id="musicPlayer">
+        <div class="player-content">
+            <div class="track-info">
+                <div class="track-cover">
+                    <img id="currentTrackCover" src="" alt="Current track">
+                </div>
+                <div class="track-details">
+                    <h4 id="currentTrackTitle">Titre de la chanson</h4>
+                    <p id="currentTrackArtist">Artiste</p>
+                </div>
+            </div>
+            
+            <div class="player-controls">
+                <button class="control-btn" id="prevBtn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+                    </svg>
+                </button>
+                <button class="control-btn play-pause-btn" id="playPauseBtn">
+                    <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                    </svg>
+                </button>
+                <button class="control-btn" id="nextBtn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="progress-section">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="time-info">
+                    <span id="currentTime">0:00</span>
+                    <span id="totalTime">3:45</span>
+                </div>
+            </div>
+            
+            <div class="volume-section">
+                <svg class="volume-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                </svg>
+                <div class="volume-bar">
+                    <div class="volume-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
